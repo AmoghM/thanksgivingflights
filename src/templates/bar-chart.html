@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <h2 style="text-align:center"> Thanksgiving Flight delays </h2>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bar chart with D3.js</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bar-chart.css')}}"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='bar-chart.js')}}">
+    </script>
+  </head>
+
+  <body>
+  <div>
+  Origin
+  <select class="form-control"  id="origin">
+  <option value="">-- Select --</option>
+  </select>
+  </div>
+  
+  <div>
+  Destination
+  <select class="form-control"  id="destination">
+  <option value="">-- Select --</option>
+  </select>
+  </div>
+  <!-- <div id="form" style="display: flex;">
+  <form id= "flight", action="{{ url_for('graph') }}">
+  Origin:<br>
+   <select class="form-control"  id="origin">
+  <option value="">-- Select --</option>
+  </select><br>
+  
+  Destination:<br>
+  <select class="form-control"  id="destination">
+  <option value="">-- Select --</option>
+  </select>
+  <input type="submit" value="Submit">
+</form> -->
+
+  </div>
+  <div id='layout'>
+  
+
+
+ <div id='container'>
+        <svg />
+      </div>
+    </div>
+  
+  </body>
+
+</html>
